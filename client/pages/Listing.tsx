@@ -14,12 +14,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-export default function Listing() {
-  const { id } = useParams();
-  const [isFavorited, setIsFavorited] = useState(false);
-
-  const listing = {
-    id: id || "1",
+const allListings = [
+  {
+    id: "1",
     title: "Cozy Cloud House with Mountain Views",
     location: "San Francisco, CA",
     price: 120,
@@ -48,7 +45,169 @@ export default function Listing() {
     beds: 3,
     baths: 2,
     guests: 4,
-  };
+  },
+  {
+    id: "2",
+    title: "Modern Apartment with Views",
+    location: "Los Angeles, CA",
+    price: 95,
+    rating: 4.9,
+    reviews: 267,
+    host: {
+      name: "Michael Johnson",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+      verified: true,
+    },
+    images: [
+      "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1506381773649-6e0ee62d2537?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1501785888041-af3ee9c470a0?w=800&h=600&fit=crop",
+    ],
+    description:
+      "Modern luxury apartment with stunning city views. Perfect for business travelers and couples. Located in the heart of downtown LA with walking distance to restaurants and shops.",
+    amenities: [
+      { icon: Wifi, label: "WiFi" },
+      { icon: Wind, label: "AC" },
+      { icon: Utensils, label: "Kitchen" },
+    ],
+    bedrooms: 1,
+    beds: 1,
+    baths: 1,
+    guests: 2,
+  },
+  {
+    id: "3",
+    title: "Serene Mountain Retreat",
+    location: "Aspen, CO",
+    price: 180,
+    rating: 4.7,
+    reviews: 89,
+    host: {
+      name: "Emma Wilson",
+      image:
+        "https://images.unsplash.com/photo-1517070213202-1e1f61588063?w=100&h=100&fit=crop",
+      verified: true,
+    },
+    images: [
+      "https://images.unsplash.com/photo-1501785888041-af3ee9c470a0?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1506381773649-6e0ee62d2537?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=800&h=600&fit=crop",
+    ],
+    description:
+      "Peaceful mountain retreat surrounded by nature. Ideal for families and groups seeking a quiet escape. Features stunning views, hiking trails, and a cozy fireplace.",
+    amenities: [
+      { icon: Wifi, label: "WiFi" },
+      { icon: Wind, label: "AC" },
+      { icon: Utensils, label: "Kitchen" },
+    ],
+    bedrooms: 4,
+    beds: 5,
+    baths: 3,
+    guests: 8,
+  },
+  {
+    id: "4",
+    title: "Beachfront Bungalow",
+    location: "Miami, FL",
+    price: 150,
+    rating: 4.9,
+    reviews: 312,
+    host: {
+      name: "David Martinez",
+      image:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
+      verified: true,
+    },
+    images: [
+      "https://images.unsplash.com/photo-1506381773649-6e0ee62d2537?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1501785888041-af3ee9c470a0?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=800&h=600&fit=crop",
+    ],
+    description:
+      "Beautiful beachfront bungalow with direct beach access. Wake up to ocean views and enjoy the tropical paradise. Perfect for romantic getaways and beach lovers.",
+    amenities: [
+      { icon: Wifi, label: "WiFi" },
+      { icon: Wind, label: "AC" },
+      { icon: Utensils, label: "Kitchen" },
+    ],
+    bedrooms: 2,
+    beds: 2,
+    baths: 2,
+    guests: 4,
+  },
+  {
+    id: "5",
+    title: "Urban Studio",
+    location: "New York, NY",
+    price: 110,
+    rating: 4.6,
+    reviews: 198,
+    host: {
+      name: "Lisa Anderson",
+      image:
+        "https://images.unsplash.com/photo-1541101767792-46b60b0b7497?w=100&h=100&fit=crop",
+      verified: true,
+    },
+    images: [
+      "https://images.unsplash.com/photo-1462905291922-a4ff9fa48dc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1506381773649-6e0ee62d2537?w=800&h=600&fit=crop",
+    ],
+    description:
+      "Chic urban studio in the heart of Manhattan. Perfect for solo travelers and short stays. Close to subway stations, restaurants, and entertainment.",
+    amenities: [
+      { icon: Wifi, label: "WiFi" },
+      { icon: Wind, label: "AC" },
+      { icon: Utensils, label: "Kitchen" },
+    ],
+    bedrooms: 0,
+    beds: 1,
+    baths: 1,
+    guests: 2,
+  },
+  {
+    id: "6",
+    title: "Lakeside Cottage",
+    location: "Seattle, WA",
+    price: 125,
+    rating: 4.8,
+    reviews: 156,
+    host: {
+      name: "Robert Thompson",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+      verified: true,
+    },
+    images: [
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe3e?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1501785888041-af3ee9c470a0?w=800&h=600&fit=crop",
+    ],
+    description:
+      "Charming cottage on the shores of a beautiful lake. Enjoy peaceful mornings and relaxing evenings. Great for families and nature enthusiasts.",
+    amenities: [
+      { icon: Wifi, label: "WiFi" },
+      { icon: Wind, label: "AC" },
+      { icon: Utensils, label: "Kitchen" },
+    ],
+    bedrooms: 3,
+    beds: 4,
+    baths: 2,
+    guests: 6,
+  },
+];
+
+export default function Listing() {
+  const { id } = useParams();
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  const listing = allListings.find((l) => l.id === id) || allListings[0];
 
   const reviews = [
     {
