@@ -91,10 +91,10 @@ const allListings = [
       verified: true,
     },
     images: [
-      "https://images.unsplash.com/photo-1501785888041-af3ee9c470a0?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1506381773649-6e0ee62d2537?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop",
     ],
     description:
       "Peaceful mountain retreat surrounded by nature. Ideal for families and groups seeking a quiet escape. Features stunning views, hiking trails, and a cozy fireplace.",
