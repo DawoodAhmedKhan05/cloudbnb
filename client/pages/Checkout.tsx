@@ -76,7 +76,8 @@ const allListings = [
 export default function Checkout() {
   const [searchParams] = useSearchParams();
   const listingId = searchParams.get("listingId") || "1";
-  const currentListing = allListings.find((l) => l.id === listingId) || allListings[0];
+  const currentListing =
+    allListings.find((l) => l.id === listingId) || allListings[0];
 
   const [cardData, setCardData] = useState({
     cardNumber: "",
@@ -101,7 +102,10 @@ export default function Checkout() {
     subtotal: currentListing.price * 3,
     cleaningFee: 30,
     serviceFee: Math.round((currentListing.price * 3 + 30) * 0.1),
-    total: currentListing.price * 3 + 30 + Math.round((currentListing.price * 3 + 30) * 0.1),
+    total:
+      currentListing.price * 3 +
+      30 +
+      Math.round((currentListing.price * 3 + 30) * 0.1),
     hostName: currentListing.hostName,
     hostImage: currentListing.hostImage,
   };
@@ -253,7 +257,10 @@ export default function Checkout() {
                     className="w-4 h-4 mt-1 rounded"
                     required
                   />
-                  <label htmlFor="terms" className="text-sm text-muted-foreground">
+                  <label
+                    htmlFor="terms"
+                    className="text-sm text-muted-foreground"
+                  >
                     I agree to the{" "}
                     <a href="#" className="text-primary hover:underline">
                       Terms of Service
