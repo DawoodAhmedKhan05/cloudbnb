@@ -14,7 +14,7 @@ const allListings = [
     hostImage:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
     image:
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=300&h=200&fit=crop",
   },
   {
     id: "2",
@@ -25,7 +25,7 @@ const allListings = [
     hostImage:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
     image:
-      "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=200&fit=crop",
   },
   {
     id: "3",
@@ -36,7 +36,7 @@ const allListings = [
     hostImage:
       "https://images.unsplash.com/photo-1517070213202-1e1f61588063?w=100&h=100&fit=crop",
     image:
-      "https://images.unsplash.com/photo-1501785888041-af3ee9c470a0?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop",
   },
   {
     id: "4",
@@ -47,7 +47,7 @@ const allListings = [
     hostImage:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
     image:
-      "https://images.unsplash.com/photo-1506381773649-6e0ee62d2537?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300&h=200&fit=crop",
   },
   {
     id: "5",
@@ -58,7 +58,7 @@ const allListings = [
     hostImage:
       "https://images.unsplash.com/photo-1541101767792-46b60b0b7497?w=100&h=100&fit=crop",
     image:
-      "https://images.unsplash.com/photo-1462905291922-a4ff9fa48dc6?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=300&h=200&fit=crop",
   },
   {
     id: "6",
@@ -69,7 +69,7 @@ const allListings = [
     hostImage:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
     image:
-      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe3e?w=300&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=300&h=200&fit=crop",
   },
 ];
 
