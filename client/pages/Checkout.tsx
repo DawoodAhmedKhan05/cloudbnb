@@ -1,10 +1,83 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Lock } from "lucide-react";
 
+const allListings = [
+  {
+    id: "1",
+    title: "Cozy Cloud House with Mountain Views",
+    location: "San Francisco, CA",
+    price: 120,
+    hostName: "Sarah Chen",
+    hostImage:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=300&h=200&fit=crop",
+  },
+  {
+    id: "2",
+    title: "Modern Apartment with Views",
+    location: "Los Angeles, CA",
+    price: 95,
+    hostName: "Michael Johnson",
+    hostImage:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=300&h=200&fit=crop",
+  },
+  {
+    id: "3",
+    title: "Serene Mountain Retreat",
+    location: "Aspen, CO",
+    price: 180,
+    hostName: "Emma Wilson",
+    hostImage:
+      "https://images.unsplash.com/photo-1517070213202-1e1f61588063?w=100&h=100&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1501785888041-af3ee9c470a0?w=300&h=200&fit=crop",
+  },
+  {
+    id: "4",
+    title: "Beachfront Bungalow",
+    location: "Miami, FL",
+    price: 150,
+    hostName: "David Martinez",
+    hostImage:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1506381773649-6e0ee62d2537?w=300&h=200&fit=crop",
+  },
+  {
+    id: "5",
+    title: "Urban Studio",
+    location: "New York, NY",
+    price: 110,
+    hostName: "Lisa Anderson",
+    hostImage:
+      "https://images.unsplash.com/photo-1541101767792-46b60b0b7497?w=100&h=100&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1462905291922-a4ff9fa48dc6?w=300&h=200&fit=crop",
+  },
+  {
+    id: "6",
+    title: "Lakeside Cottage",
+    location: "Seattle, WA",
+    price: 125,
+    hostName: "Robert Thompson",
+    hostImage:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe3e?w=300&h=200&fit=crop",
+  },
+];
+
 export default function Checkout() {
+  const [searchParams] = useSearchParams();
+  const listingId = searchParams.get("listingId") || "1";
+  const currentListing = allListings.find((l) => l.id === listingId) || allListings[0];
+
   const [cardData, setCardData] = useState({
     cardNumber: "",
     cardName: "",
@@ -19,19 +92,18 @@ export default function Checkout() {
   };
 
   const bookingDetails = {
-    listingTitle: "Cozy Cloud House with Mountain Views",
-    location: "San Francisco, CA",
+    listingTitle: currentListing.title,
+    location: currentListing.location,
     checkIn: "2024-12-20",
     checkOut: "2024-12-23",
     nights: 3,
-    pricePerNight: 120,
-    subtotal: 360,
+    pricePerNight: currentListing.price,
+    subtotal: currentListing.price * 3,
     cleaningFee: 30,
-    serviceFee: 39,
-    total: 429,
-    hostName: "Sarah Chen",
-    hostImage:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+    serviceFee: Math.round((currentListing.price * 3 + 30) * 0.1),
+    total: currentListing.price * 3 + 30 + Math.round((currentListing.price * 3 + 30) * 0.1),
+    hostName: currentListing.hostName,
+    hostImage: currentListing.hostImage,
   };
 
   return (
@@ -39,7 +111,7 @@ export default function Checkout() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back Button */}
         <Link
-          to="/listing/1"
+          to={`/listing/${listingId}`}
           className="flex items-center gap-2 text-primary hover:text-primary/80 mb-8 font-semibold"
         >
           <ArrowLeft size={20} />
@@ -181,10 +253,7 @@ export default function Checkout() {
                     className="w-4 h-4 mt-1 rounded"
                     required
                   />
-                  <label
-                    htmlFor="terms"
-                    className="text-sm text-muted-foreground"
-                  >
+                  <label htmlFor="terms" className="text-sm text-muted-foreground">
                     I agree to the{" "}
                     <a href="#" className="text-primary hover:underline">
                       Terms of Service
@@ -215,7 +284,7 @@ export default function Checkout() {
             <div className="sticky top-20 bg-card border border-border rounded-xl p-6 shadow-lg">
               <div className="mb-6 pb-6 border-b border-border">
                 <img
-                  src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=300&h=200&fit=crop"
+                  src={currentListing.image}
                   alt="Listing"
                   className="w-full h-32 object-cover rounded-lg mb-3"
                 />
