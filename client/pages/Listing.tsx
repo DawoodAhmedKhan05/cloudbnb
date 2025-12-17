@@ -153,10 +153,10 @@ const allListings = [
       verified: true,
     },
     images: [
-      "https://images.unsplash.com/photo-1462905291922-a4ff9fa48dc6?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1506381773649-6e0ee62d2537?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
     ],
     description:
       "Chic urban studio in the heart of Manhattan. Perfect for solo travelers and short stays. Close to subway stations, restaurants, and entertainment.",
