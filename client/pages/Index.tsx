@@ -19,7 +19,7 @@ interface Listing {
 
 export default function Index() {
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
-  const [listings, setListings] = useState<Listing[]>([
+  const [listings] = useState<Listing[]>([
     {
       id: "1",
       title: "Cozy Cloud House",
@@ -28,7 +28,7 @@ export default function Index() {
       rating: 4.8,
       reviews: 143,
       image:
-        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=500&h=400&fit=crop",
       type: "Entire home",
     },
     {
@@ -39,7 +39,7 @@ export default function Index() {
       rating: 4.9,
       reviews: 267,
       image:
-        "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=500&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=400&fit=crop",
       type: "Entire home",
     },
     {
@@ -50,7 +50,7 @@ export default function Index() {
       rating: 4.7,
       reviews: 89,
       image:
-        "https://images.unsplash.com/photo-1501785888041-af3ee9c470a0?w=500&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
       type: "Entire home",
     },
     {
@@ -61,7 +61,7 @@ export default function Index() {
       rating: 4.9,
       reviews: 312,
       image:
-        "https://images.unsplash.com/photo-1506381773649-6e0ee62d2537?w=500&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=400&fit=crop",
       type: "Entire home",
     },
     {
@@ -72,7 +72,7 @@ export default function Index() {
       rating: 4.6,
       reviews: 198,
       image:
-        "https://images.unsplash.com/photo-1462905291922-a4ff9fa48dc6?w=500&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=500&h=400&fit=crop",
       type: "Private room",
     },
     {
@@ -83,7 +83,7 @@ export default function Index() {
       rating: 4.8,
       reviews: 156,
       image:
-        "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe3e?w=500&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop",
       type: "Entire home",
     },
   ]);
