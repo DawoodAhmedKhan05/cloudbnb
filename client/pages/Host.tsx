@@ -231,9 +231,7 @@ export default function Host() {
                           onChange={(e) => {
                             const newAmenities = e.target.checked
                               ? [...formData.amenities, amenity]
-                              : formData.amenities.filter(
-                                  (a) => a !== amenity
-                                );
+                              : formData.amenities.filter((a) => a !== amenity);
                             setFormData({
                               ...formData,
                               amenities: newAmenities,
@@ -255,7 +253,10 @@ export default function Host() {
                   </h2>
 
                   <div className="border-2 border-dashed border-border rounded-lg p-8 text-center">
-                    <Upload size={40} className="mx-auto mb-2 text-muted-foreground" />
+                    <Upload
+                      size={40}
+                      className="mx-auto mb-2 text-muted-foreground"
+                    />
                     <p className="font-semibold mb-1">Upload Photos</p>
                     <p className="text-sm text-muted-foreground">
                       Drag and drop or click to select
@@ -275,7 +276,9 @@ export default function Host() {
                   </p>
 
                   <div className="border border-border rounded-lg h-64 flex items-center justify-center">
-                    <p className="text-muted-foreground">Calendar widget coming soon</p>
+                    <p className="text-muted-foreground">
+                      Calendar widget coming soon
+                    </p>
                   </div>
                 </div>
 
@@ -287,10 +290,7 @@ export default function Host() {
                   >
                     Create Listing
                   </Button>
-                  <Button
-                    type="button"
-                    variant="outline"
-                  >
+                  <Button type="button" variant="outline">
                     Save as Draft
                   </Button>
                 </div>
@@ -319,18 +319,16 @@ export default function Host() {
                       <p className="text-sm text-muted-foreground mb-2">
                         {listing.location}
                       </p>
-                      <p className="font-bold text-primary">${listing.price}/night</p>
+                      <p className="font-bold text-primary">
+                        ${listing.price}/night
+                      </p>
                     </div>
                     <div className="text-right">
                       <p className="text-sm text-muted-foreground mb-2">
                         {listing.bookings} bookings
                       </p>
                       <p className="font-bold text-lg">${listing.revenue}</p>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="mt-2"
-                      >
+                      <Button size="sm" variant="outline" className="mt-2">
                         Edit
                       </Button>
                     </div>

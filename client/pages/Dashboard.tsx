@@ -70,7 +70,9 @@ export default function Dashboard() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold">Welcome back!</h1>
-            <p className="text-muted-foreground">Manage your bookings and preferences</p>
+            <p className="text-muted-foreground">
+              Manage your bookings and preferences
+            </p>
           </div>
           <Button variant="outline" className="flex items-center gap-2">
             <LogOut size={20} />
@@ -140,7 +142,10 @@ export default function Dashboard() {
                 ))
               ) : (
                 <div className="text-center py-12">
-                  <Calendar size={48} className="mx-auto mb-4 text-muted-foreground" />
+                  <Calendar
+                    size={48}
+                    className="mx-auto mb-4 text-muted-foreground"
+                  />
                   <p className="text-muted-foreground">No bookings yet</p>
                 </div>
               )}
@@ -163,10 +168,7 @@ export default function Dashboard() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                     />
                     <button className="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md">
-                      <Heart
-                        size={20}
-                        className="fill-accent text-accent"
-                      />
+                      <Heart size={20} className="fill-accent text-accent" />
                     </button>
                   </div>
                   <div className="p-4">
@@ -218,7 +220,10 @@ export default function Dashboard() {
                 ))
               ) : (
                 <div className="text-center py-12">
-                  <Star size={48} className="mx-auto mb-4 text-muted-foreground" />
+                  <Star
+                    size={48}
+                    className="mx-auto mb-4 text-muted-foreground"
+                  />
                   <p className="text-muted-foreground">No reviews yet</p>
                 </div>
               )}
@@ -229,7 +234,9 @@ export default function Dashboard() {
           <TabsContent value="hosting" className="mt-8">
             <div className="text-center py-12">
               <Home size={48} className="mx-auto mb-4 text-muted-foreground" />
-              <p className="text-muted-foreground mb-4">You haven't listed any properties yet</p>
+              <p className="text-muted-foreground mb-4">
+                You haven't listed any properties yet
+              </p>
               <Link to="/host">
                 <Button className="bg-primary hover:bg-primary/90">
                   Start Hosting

@@ -34,9 +34,14 @@ export default function Signup() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-semibold mb-2">Full Name</label>
+              <label className="block text-sm font-semibold mb-2">
+                Full Name
+              </label>
               <div className="relative">
-                <User className="absolute left-3 top-3 text-muted-foreground" size={20} />
+                <User
+                  className="absolute left-3 top-3 text-muted-foreground"
+                  size={20}
+                />
                 <input
                   type="text"
                   value={name}
@@ -51,7 +56,10 @@ export default function Signup() {
             <div>
               <label className="block text-sm font-semibold mb-2">Email</label>
               <div className="relative">
-                <Mail className="absolute left-3 top-3 text-muted-foreground" size={20} />
+                <Mail
+                  className="absolute left-3 top-3 text-muted-foreground"
+                  size={20}
+                />
                 <input
                   type="email"
                   value={email}
@@ -64,9 +72,14 @@ export default function Signup() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-2">Password</label>
+              <label className="block text-sm font-semibold mb-2">
+                Password
+              </label>
               <div className="relative">
-                <Lock className="absolute left-3 top-3 text-muted-foreground" size={20} />
+                <Lock
+                  className="absolute left-3 top-3 text-muted-foreground"
+                  size={20}
+                />
                 <input
                   type="password"
                   value={password}
@@ -79,9 +92,14 @@ export default function Signup() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-2">Confirm Password</label>
+              <label className="block text-sm font-semibold mb-2">
+                Confirm Password
+              </label>
               <div className="relative">
-                <Lock className="absolute left-3 top-3 text-muted-foreground" size={20} />
+                <Lock
+                  className="absolute left-3 top-3 text-muted-foreground"
+                  size={20}
+                />
                 <input
                   type="password"
                   value={confirmPassword}
@@ -104,7 +122,10 @@ export default function Signup() {
           <div className="mt-6 text-center">
             <p className="text-muted-foreground">
               Already have an account?{" "}
-              <Link to="/login" className="text-primary font-semibold hover:underline">
+              <Link
+                to="/login"
+                className="text-primary font-semibold hover:underline"
+              >
                 Sign in
               </Link>
             </p>
@@ -114,10 +135,7 @@ export default function Signup() {
             <p className="text-sm text-muted-foreground text-center mb-4">
               Or sign up with
             </p>
-            <Button
-              variant="outline"
-              className="w-full"
-            >
+            <Button variant="outline" className="w-full">
               Google
             </Button>
           </div>

@@ -125,9 +125,7 @@ export default function Layout({ children }: LayoutProps) {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow w-full">
-        {children}
-      </main>
+      <main className="flex-grow w-full">{children}</main>
 
       {/* Footer */}
       <footer className="border-t border-border bg-secondary/30 mt-20">
@@ -137,12 +135,18 @@ export default function Layout({ children }: LayoutProps) {
               <h3 className="font-semibold mb-4">Support</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <Link to="/help" className="hover:text-foreground transition-colors">
+                  <Link
+                    to="/help"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Help Center
                   </Link>
                 </li>
                 <li>
-                  <Link to="/safety" className="hover:text-foreground transition-colors">
+                  <Link
+                    to="/safety"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Safety Info
                   </Link>
                 </li>
@@ -152,12 +156,18 @@ export default function Layout({ children }: LayoutProps) {
               <h3 className="font-semibold mb-4">Community</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <Link to="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    to="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Blog
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    to="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     News
                   </Link>
                 </li>
@@ -167,12 +177,18 @@ export default function Layout({ children }: LayoutProps) {
               <h3 className="font-semibold mb-4">Hosting</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <Link to="/host" className="hover:text-foreground transition-colors">
+                  <Link
+                    to="/host"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Become a Host
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    to="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Host Resources
                   </Link>
                 </li>
@@ -182,12 +198,18 @@ export default function Layout({ children }: LayoutProps) {
               <h3 className="font-semibold mb-4">About</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <Link to="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    to="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    to="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Privacy
                   </Link>
                 </li>

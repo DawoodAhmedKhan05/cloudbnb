@@ -1,6 +1,15 @@
 import { useParams } from "react-router-dom";
 import Layout from "@/components/Layout";
-import { Star, MapPin, Users, Wifi, Wind, Utensils, Heart, Share2 } from "lucide-react";
+import {
+  Star,
+  MapPin,
+  Users,
+  Wifi,
+  Wind,
+  Utensils,
+  Heart,
+  Share2,
+} from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -100,9 +109,7 @@ export default function Listing() {
               <Heart
                 size={24}
                 className={
-                  isFavorited
-                    ? "fill-accent text-accent"
-                    : "text-foreground"
+                  isFavorited ? "fill-accent text-accent" : "text-foreground"
                 }
               />
             </button>
@@ -185,7 +192,10 @@ export default function Listing() {
               </h2>
               <div className="space-y-6">
                 {reviews.map((review) => (
-                  <div key={review.id} className="pb-6 border-b border-border last:border-b-0">
+                  <div
+                    key={review.id}
+                    className="pb-6 border-b border-border last:border-b-0"
+                  >
                     <div className="flex items-start gap-4 mb-3">
                       <img
                         src={review.avatar}
@@ -226,9 +236,7 @@ export default function Listing() {
             <div className="sticky top-20 bg-card border border-border rounded-xl p-6 shadow-lg">
               {/* Price */}
               <div className="mb-6 pb-6 border-b border-border">
-                <p className="text-muted-foreground mb-2">
-                  Price per night
-                </p>
+                <p className="text-muted-foreground mb-2">Price per night</p>
                 <p className="text-4xl font-bold">
                   ${listing.price}
                   <span className="text-lg font-normal text-muted-foreground">
@@ -242,18 +250,12 @@ export default function Listing() {
                 <label className="block text-sm font-semibold mb-2">
                   Check-in
                 </label>
-                <input
-                  type="date"
-                  className="cloudbnb-input w-full mb-3"
-                />
+                <input type="date" className="cloudbnb-input w-full mb-3" />
 
                 <label className="block text-sm font-semibold mb-2">
                   Check-out
                 </label>
-                <input
-                  type="date"
-                  className="cloudbnb-input w-full mb-3"
-                />
+                <input type="date" className="cloudbnb-input w-full mb-3" />
 
                 <label className="block text-sm font-semibold mb-2">
                   Guests
@@ -292,7 +294,10 @@ export default function Listing() {
                 <div className="flex justify-between font-semibold border-t border-border pt-2 mt-2">
                   <span>Total</span>
                   <span>
-                    ${listing.price * 3 + 30 + Math.round((listing.price * 3 + 30) * 0.1)}
+                    $
+                    {listing.price * 3 +
+                      30 +
+                      Math.round((listing.price * 3 + 30) * 0.1)}
                   </span>
                 </div>
               </div>

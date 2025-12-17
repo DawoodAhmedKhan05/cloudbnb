@@ -181,7 +181,10 @@ export default function Checkout() {
                     className="w-4 h-4 mt-1 rounded"
                     required
                   />
-                  <label htmlFor="terms" className="text-sm text-muted-foreground">
+                  <label
+                    htmlFor="terms"
+                    className="text-sm text-muted-foreground"
+                  >
                     I agree to the{" "}
                     <a href="#" className="text-primary hover:underline">
                       Terms of Service

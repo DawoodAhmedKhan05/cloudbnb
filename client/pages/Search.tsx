@@ -121,7 +121,9 @@ export default function Search() {
               {guests && (
                 <div>
                   <p className="text-muted-foreground">Guests</p>
-                  <p className="font-semibold">{guests} {guests === "1" ? "guest" : "guests"}</p>
+                  <p className="font-semibold">
+                    {guests} {guests === "1" ? "guest" : "guests"}
+                  </p>
                 </div>
               )}
             </div>
@@ -195,13 +197,17 @@ export default function Search() {
                           />
                         ))}
                       </div>
-                      <span className="font-semibold text-xs">{listing.rating}</span>
+                      <span className="font-semibold text-xs">
+                        {listing.rating}
+                      </span>
                     </div>
 
                     {/* Price */}
                     <div className="flex items-baseline gap-1">
                       <span className="font-bold">${listing.price}</span>
-                      <span className="text-muted-foreground text-xs">/night</span>
+                      <span className="text-muted-foreground text-xs">
+                        /night
+                      </span>
                     </div>
                   </div>
                 </Link>

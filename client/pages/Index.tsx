@@ -119,20 +119,16 @@ export default function Index() {
 
           {/* Quick Filters */}
           <div className="flex flex-wrap gap-2 justify-center">
-            {[
-              "Beachfront",
-              "Luxury",
-              "Mountain",
-              "City",
-              "Nature",
-            ].map((filter) => (
-              <button
-                key={filter}
-                className="px-4 py-2 rounded-full bg-white border border-border hover:bg-secondary transition-colors text-sm font-medium"
-              >
-                {filter}
-              </button>
-            ))}
+            {["Beachfront", "Luxury", "Mountain", "City", "Nature"].map(
+              (filter) => (
+                <button
+                  key={filter}
+                  className="px-4 py-2 rounded-full bg-white border border-border hover:bg-secondary transition-colors text-sm font-medium"
+                >
+                  {filter}
+                </button>
+              ),
+            )}
           </div>
         </div>
 
@@ -143,7 +139,9 @@ export default function Index() {
 
       {/* Features Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-12">Why Choose Cloudbnb?</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-12">
+          Why Choose Cloudbnb?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-6 rounded-xl border border-border bg-card hover:shadow-lg transition-shadow">
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
@@ -185,7 +183,8 @@ export default function Index() {
             </div>
             <h3 className="font-semibold mb-2">Secure Payments</h3>
             <p className="text-muted-foreground text-sm">
-              Your payment information is protected with enterprise-grade security.
+              Your payment information is protected with enterprise-grade
+              security.
             </p>
           </div>
 
@@ -290,7 +289,9 @@ export default function Index() {
                       />
                     ))}
                   </div>
-                  <span className="font-semibold text-sm">{listing.rating}</span>
+                  <span className="font-semibold text-sm">
+                    {listing.rating}
+                  </span>
                   <span className="text-muted-foreground text-sm">
                     ({listing.reviews})
                   </span>
@@ -314,7 +315,8 @@ export default function Index() {
             Ready to Host?
           </h2>
           <p className="text-lg opacity-90 mb-8 max-w-xl mx-auto">
-            Earn money by sharing your space with travelers from around the world.
+            Earn money by sharing your space with travelers from around the
+            world.
           </p>
           <Link to="/host">
             <Button className="bg-white text-primary hover:bg-white/90 font-semibold">

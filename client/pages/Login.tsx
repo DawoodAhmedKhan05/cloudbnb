@@ -30,7 +30,10 @@ export default function Login() {
             <div>
               <label className="block text-sm font-semibold mb-2">Email</label>
               <div className="relative">
-                <Mail className="absolute left-3 top-3 text-muted-foreground" size={20} />
+                <Mail
+                  className="absolute left-3 top-3 text-muted-foreground"
+                  size={20}
+                />
                 <input
                   type="email"
                   value={email}
@@ -43,9 +46,14 @@ export default function Login() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-2">Password</label>
+              <label className="block text-sm font-semibold mb-2">
+                Password
+              </label>
               <div className="relative">
-                <Lock className="absolute left-3 top-3 text-muted-foreground" size={20} />
+                <Lock
+                  className="absolute left-3 top-3 text-muted-foreground"
+                  size={20}
+                />
                 <input
                   type="password"
                   value={password}
@@ -68,7 +76,10 @@ export default function Login() {
           <div className="mt-6 text-center">
             <p className="text-muted-foreground">
               Don't have an account?{" "}
-              <Link to="/signup" className="text-primary font-semibold hover:underline">
+              <Link
+                to="/signup"
+                className="text-primary font-semibold hover:underline"
+              >
                 Sign up
               </Link>
             </p>
@@ -78,10 +89,7 @@ export default function Login() {
             <p className="text-sm text-muted-foreground text-center mb-4">
               Or continue with
             </p>
-            <Button
-              variant="outline"
-              className="w-full"
-            >
+            <Button variant="outline" className="w-full">
               Google
             </Button>
           </div>
