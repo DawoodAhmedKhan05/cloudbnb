@@ -428,7 +428,7 @@ export default function Listing() {
               </div>
 
               {/* Booking Button */}
-              <Link to="/checkout" className="w-full">
+              <Link to={`/checkout?listingId=${listing.id}`} className="w-full">
                 <Button className="w-full bg-primary hover:bg-primary/90 h-12 text-base font-semibold rounded-lg mb-4">
                   Reserve
                 </Button>
