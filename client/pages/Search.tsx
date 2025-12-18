@@ -403,7 +403,7 @@ export default function Search() {
   // Filter listings based on location search
   const filteredListings = location
     ? allListings.filter((l) =>
-        l.location.toLowerCase().includes(location.toLowerCase())
+        l.location.toLowerCase().includes(location.toLowerCase()),
       )
     : allListings;
 
