@@ -121,12 +121,13 @@ export default function Index() {
           <div className="flex flex-wrap gap-2 justify-center">
             {["Beachfront", "Luxury", "Mountain", "City", "Nature"].map(
               (filter) => (
-                <button
+                <Link
                   key={filter}
+                  to={`/search?category=${filter.toLowerCase()}`}
                   className="px-4 py-2 rounded-full bg-white border border-border hover:bg-secondary transition-colors text-sm font-medium"
                 >
                   {filter}
-                </button>
+                </Link>
               ),
             )}
           </div>
