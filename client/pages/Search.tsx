@@ -100,7 +100,7 @@ export default function Search() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-4">Search Results</h1>
           <div className="bg-secondary/50 rounded-lg p-4 mb-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 text-sm">
               {location && (
                 <div>
                   <p className="text-muted-foreground">Location</p>
@@ -125,6 +125,12 @@ export default function Search() {
                   <p className="font-semibold">
                     {guests} {guests === "1" ? "guest" : "guests"}
                   </p>
+                </div>
+              )}
+              {category && (
+                <div>
+                  <p className="text-muted-foreground">Type</p>
+                  <p className="font-semibold capitalize">{category}</p>
                 </div>
               )}
             </div>
