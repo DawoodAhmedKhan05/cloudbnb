@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import SearchBar from "@/components/SearchBar";
 import { MapPin, Star, Heart, Map } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 export default function Search() {
   const [searchParams] = useSearchParams();
