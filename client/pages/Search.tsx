@@ -11,6 +11,7 @@ export default function Search() {
   const checkIn = searchParams.get("checkIn");
   const checkOut = searchParams.get("checkOut");
   const guests = searchParams.get("guests");
+  const category = searchParams.get("category");
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
 
   const listings = [
